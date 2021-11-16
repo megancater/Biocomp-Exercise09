@@ -7,7 +7,7 @@ rm(list=ls())
 # reads from a directory and determines the coefficient of variation of each file inside the directory
 # if files have a header, user must specify the header
 # if the files do not have a header, user can specify column # or leave blank
-read_data<-function(dir, column=NULL, sep_type=",", override=FALSE) {
+calc_coeff_vars<-function(dir, column=NULL, sep_type=",", override=FALSE) {
   # lists the files in the directory
   dir_files = list.files(path=dir)
   
@@ -63,4 +63,4 @@ read_data<-function(dir, column=NULL, sep_type=",", override=FALSE) {
 }
 
 # Example of usage
-# read_data('test/', 'column', sep_type=',', override=TRUE)
+# calc_coeff_vars('test/', 'column', sep_type=',', override=TRUE)
